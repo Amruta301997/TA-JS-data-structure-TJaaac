@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // output and reason true created new variable name newUser and it strored in variable name user
+- `user === newUser;`//true 
+- `user.name === newUser.name;`//true both values are same because it is stored in a variable name newUser
+- `user.name == newUser.name;`//true
+- `user.sibling == newUser.sibling;`//true Again created new varible name called user.sibling and connected to the newUser
+- `user.sibling === newUser.sibling;`//true
+- `user.sibling == allBrothers;`//false because allBrothers variable are not connected to others
+- `user.sibling === allBrothers;`//false
+- `brothersCopy === allBrothers;`//false
+- `brothersCopy == allBrothers;`//false
+- `brothersCopy == user.sibling;`//true
+- `brothersCopy === user.sibling;`//true
+- `brothersCopy[0] === user.sibling[0];`//true
+- `brothersCopy[1] === user.sibling[1];`//true
+- `user.sibling[1] === newUser.sibling[1];`//true
