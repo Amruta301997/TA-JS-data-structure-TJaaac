@@ -13,13 +13,13 @@ Answer the following with reason after going through the above code:
 
 - `[10] === [10]`
 - What is the value of obj? // answer
-- `obj == newObj`
-- `obj === newObj`
-- `user === newObj`
-- `user == newObj`
-- `user == obj`
-- `arr == arr2`
-- `arr === arr2`
+- `obj == newObj`//false newObj is a new variabl and it is not connected to obj.
+- `obj === newObj`//false
+- `user === newObj`//false
+- `user == newObj`//false
+- `user == obj`//true user is a new variable and that stored obj variable
+- `arr == arr2`//true
+- `arr === arr2`//true
 
 2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
 
@@ -36,6 +36,9 @@ var person2 = personDetails(person1);
 console.log(person1);
 console.log(person2);
 ```
+person1-{name: 'Alex', age: 25}
+person2-{name: 'John', age: 50}
+
 
 3. What will be the output of the below code:
 
@@ -46,6 +49,6 @@ var user = {
 };
 user.brothers = brothers;
 brothers.push('Robb');
-console.log(user.brothers === brothers); //1. output
-console.log(user.brothers.length === brothers.length); //2. output
+console.log(user.brothers === brothers); //1. output true
+console.log(user.brothers.length === brothers.length); //2. output true
 ```
