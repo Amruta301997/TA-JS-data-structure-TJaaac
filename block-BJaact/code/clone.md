@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // output Arya because it is copying one to another object and Arya name is updated to first object.
+console.log(person.firstName); // output Arya
+console.log(person.lastName); // output Doe
+console.log(person == person2); // output true copying the data to another object
+console.log(person === person2); // output true
+console.log(person.lastName === person2.lastName); // output true
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output Arya
+console.log(person.firstName); // output John
+console.log(personTwo.lastName); // output doe
+console.log(person.firstName === personTwo.firstName); // output false
+console.log(person == personTwo); // output false
+console.log(person === personTwo); // output false
+console.log(person.address === personTwo.address); // output false
+console.log(person.address == personTwo.address); // output false
+console.log(personTwo.address.city); // output  error-Cannot read properties of undefined. It will clone the first layer.
+console.log(person.address.city); // output san jose
+console.log(person.address.city == personTwo.address.city); // output  error-Cannot read properties of undefined. It will clone the first layer.
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output arya
+console.log(person.firstName); // output John
+console.log(personTwo.lastName); // output Doe
+console.log(person.firstName === personTwo.firstName); // output false
+console.log(person == personTwo); // output false
+console.log(person === personTwo); // output false
+console.log(person.address === personTwo.address); // output false
+console.log(person.address == personTwo.address); // output false
+console.log(personTwo.address.city); // output undefined
+console.log(person.address.city); // output san jose
+console.log(person.address.city == personTwo.address.city); // output false
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -104,6 +104,7 @@ let blogs = [
 ];
 
 // Your code goes here
+let clonedBlogs = { ...blogs };
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -129,6 +130,7 @@ var questions = [
 ];
 
 // Your code goes here
+let questionClone ={ ...question };
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -154,7 +156,7 @@ var allBlogs = {
     },
   ],
 };
-
+let allBlogsClone = { ...allBlogs };
 // Your code goes here
 ```
 
@@ -189,13 +191,20 @@ let person = [
 ];
 
 // Your code goes here
+let clonedPerson={...person};
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
+function cloneObject(object) {
   // your code
+  if(person==clonedPerson && user==cloned){
+      return `not clone`;
+  }else{
+  return `cloned successfully`;
+  }
+
 }
 
 // Run the test below to check your function
